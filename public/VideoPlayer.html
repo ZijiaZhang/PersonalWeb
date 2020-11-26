@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<video style="width:100%; height:auto" controls>
+  <source id ="source" src="">
+  Your browser does not support the video tag.
+</video>
+<script type="text/javascript">
+	document.getElementById("source").src = new URLSearchParams(window.location.search).get('link')
+</script>
+</body>
+</html>

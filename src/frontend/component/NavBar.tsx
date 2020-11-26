@@ -1,0 +1,50 @@
+import React from "react";
+
+export class NavBar extends React.Component<{}, {}>{
+    ref = React.createRef<HTMLUListElement>();
+    render() {
+        return (
+            <ul ref={this.ref} id="primary_nav" className="hiddenm">
+
+                <li className="active interactive">
+                    <a id="menu_control" onClick={() => this.expand()}>
+                        <i className="fa fa-bars"/>
+                    </a>
+                </li>
+
+                <li className="current-menu-item">
+                    <a href="#">Home</a>
+                </li>
+                <li className="active">
+                    <a href="#start">Get Started</a>
+                </li>
+                <li className="active">
+                    <a href="#projects">Projects</a>
+                </li>
+                <li className="have-child">
+                    <a href="#">Server</a>
+                    <ul>
+                        <li>
+                            <a href="/files">Files</a>
+                        </li>
+                    </ul>
+                </li>
+                <li className="active">
+                    <a href="#info">Contact Me</a>
+                </li>
+
+            </ul>
+        )
+    }
+
+    expand(){
+        let x = this.ref.current;
+        if (x) {
+            if (x.className === "") {
+                x.className += "hiddenm";
+            } else {
+                x.className = "";
+            }
+        }
+    }
+}
