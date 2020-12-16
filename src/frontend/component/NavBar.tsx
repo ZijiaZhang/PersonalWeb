@@ -25,7 +25,7 @@ export class NavBar extends React.Component<{}, {}>{
                     <a href="#">Server</a>
                     <ul>
                         <li>
-                            <a href="/files">Files</a>
+                            <a href="http://files.zijiazhang.me">Files</a>
                         </li>
                     </ul>
                 </li>
