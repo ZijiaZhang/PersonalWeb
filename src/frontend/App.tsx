@@ -18,7 +18,10 @@ const projects = [{name:"3D Snake Game",link:"VideoPlayer.php?link=videos\/Snake
     {name:"HForm",link:"http:\/\/protein.ict.ac.cn\/HForm\/",description:"A Website that receive a DNA sequence from the user, and match it with recalculated data base to present the potential known secondary structure.",status:"Work",image:"images\/HForm.png",category:"Database, Python, PHP"},
     {name:"ScifiRunner",link:"https:\/\/github.com\/ZijiaZhang\/ScifiRunner",description:"An endless runner game that is currently under development using Unreal Engine 4. Targeting mobile and desktop Platforms.",status:"Personal",image:"images\/No_image_3x4.svg",category:"Unreal C++ Android iOS"},
     {name:"3D Tetris",link:"files\/public\/3DTetris\/",description:"A 3D Teris Game Available on Android and iOS in which user can customize the size of the board. ",status:"Personal",image:"images\/Tetris.png",category:"Unreal C++ Mobile"},
-    {name:"Simple Neural Net",link:".\/SimpleNN\/index.html",description:"A Simple Neural Network",status:"Finished",image:"images\/No_image_3x4.svg",category:"Personal"}
+ //   {name:"Simple Neural Net",link:".\/SimpleNN\/index.html",description:"A Simple Neural Network",status:"Finished",image:"images\/No_image_3x4.svg",category:"Personal"}
+    {name:"UBC Tantan", link: "https:\/\/github.com\/ZijiaZhang\/CPSC436_Project", description: "UBC TANTAN is a full-stack social networking web application, which allows new students to UBC to edit their profiles, share posts, add new friends, and chat with them. It also supports group chats, backend monitoring, and friend recommendations.", status: "Academic",image:"images\/UBCTanTan.PNG",category:"Node.js React"},
+    {name:"Van Exposure", link: "https:\/\/van-exposure.duckdns.org", description: "A website provide visualization of possible COVID exposure based on BCCDC data and user reports.", status: "Hackathon",image:"images\/VanExposure.PNG",category:"Node.js React"}
+
 ];
 
 const experiences = [{color: "green", icon: "fa-search", title:"Intern Student",
@@ -39,8 +42,12 @@ const experiences = [{color: "green", icon: "fa-search", title:"Intern Student",
         date:"April - September2019", link:"https://aispace2.github.io/AISpace2/index.html"},
     {color: "yellow", icon: "fa-chalkboard-teacher", title:"Teaching Assistant of CPSC 221",
         location:"University of British Columbia",
-        body:"I help students debug their code and answer their questions about C++.",
+        body:"I helped students debug their code and answer their questions about C++.",
         date:"September-December 2019", link:null},
+    {color: "yellow", icon: "fa-briefcase", title:"Software Development Intern",
+        location:"Demonware",
+        body:"I worked as part of Application Platform Team, supports the launch of Call of Duty.",
+        date:"January-December 2020", link:null},
 ] as ExperienceProps[];
 
 export class App extends React.Component<{}, {}>{
