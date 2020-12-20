@@ -28,9 +28,9 @@ export class Info extends React.Component<{}, {}>{
                             </div>
                             <div> Phone: &nbsp;&nbsp; (647)219-4689</div>
                             <div><br/></div>
-                            2205 Lower Mall<br/> PO Box 1380<br/>
+                            6005 Walter Gage Road<br/>
                             <div> Vancouver, BC, Canada</div>
-                            <div>V6T1Z4<br/></div>
+                            <div>V6T0B3<br/></div>
                         </div>
                     </div>
                 </div>

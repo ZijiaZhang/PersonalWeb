@@ -10,7 +10,7 @@ export class Footer extends React.Component<{}, {}>{
 
                     <div>
                         <div style={{textAlign: "center", color: "white"}}>
-                            © 2019 Zijia Zhang
+                            © 2020 Zijia Zhang
                         </div>
                     </div>
                     <div className="links">

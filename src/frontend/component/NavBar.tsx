@@ -16,10 +16,10 @@ export class NavBar extends React.Component<{}, {}>{
                     <a href="#">Home</a>
                 </li>
                 <li className="active">
-                    <a href="#start">Get Started</a>
+                    <a href="#projects">Projects</a>
                 </li>
                 <li className="active">
-                    <a href="#projects">Projects</a>
+                    <a href="#experience">Experience</a>
                 </li>
                 <li className="have-child">
                     <a href="#">Server</a>
