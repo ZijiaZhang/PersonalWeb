@@ -49,6 +49,10 @@ const experiences = [{color: "green", icon: "fa-search", title:"Intern Student",
         location:"Demonware",
         body:"I worked as part of Application Platform Team, supports the launch of Call of Duty.",
         date:"January-December 2020", link:null},
+    {color: "yellow", icon: "fa-chalkboard-teacher", title:"Teaching Assistant of CPSC 322",
+        location:"University of British Columbia",
+        body:"I helped students understand the fundamental Algorithms in AI",
+        date:"January-May 2021", link:null}
 ] as ExperienceProps[];
 
 export class App extends React.Component<{}, {}>{

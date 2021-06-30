@@ -14,7 +14,7 @@ export class Footer extends React.Component<{}, {}>{
                         </div>
                     </div>
                     <div className="links">
-                        <a href="https://github.com/ZijiaZhang99">
+                        <a href="https://github.com/ZijiaZhang">
                             <img src="https://zijiazhang.com/server_files/icons/github-circle.png" alt={"github-icon"}/>
                         </a>
                     </div>
