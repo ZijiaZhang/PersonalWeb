@@ -100,11 +100,10 @@ export const get_all_photos = () => {
             (data) => {
                 data.json().then(async (value:any)=>{
                     let photos: PhotoInfo[] = [];
-                    for (let image of value){
-                        let img: any = await getMeta("photos_small/" + image);
-                        photos.push({name: image, image: "photos_small/" + image, width: img.naturalWidth, height: img.naturalHeight, ratio: img.naturalWidth/img.naturalHeight});
-                        //console.log( img.naturalWidth/img.naturalHeight);
-
+                    let promises = value.map((image: string) => getMeta("photos_tiny/" + image));
+                    let images: any[] = await Promise.all(promises);
+                    for (let img of images){
+                        photos.push({name: img.src, image: img.src, width: img.naturalWidth, height: img.naturalHeight, ratio: img.naturalWidth/img.naturalHeight});
                     }
                     photos = format_photos(photos);
 

@@ -29,9 +29,10 @@ class _Photos extends React.Component<PhotosProps, {}>{
                    </h1>
 
                    <div style={{width: "100%", display: "flex", flexWrap: "wrap"}}>
-                       {this.props.photos.map( (info) => {
+                       {this.props.photos.length >0? this.props.photos.map( (info) => {
                            //console.log(info.image);
-                           return <img className={"photo"} key={info.image} src={info.image} width={info.width} height={info.height}/>})}
+                           return <img className={"photo"} key={info.image} src={info.image} width={info.width} height={info.height}/>
+                       }): (<div className="loading">Loading&#8230;</div>)}
                    </div>
                </div>
            </div>

@@ -1,7 +1,7 @@
 path = require('path');
 
 module.exports = {
-    mode: "development",
+    mode: "production",
     devtool: "source-map",
     entry: {
         main: './src/index.tsx',
