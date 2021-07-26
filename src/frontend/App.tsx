@@ -9,6 +9,11 @@ import AOS from 'aos';
 import $ from 'jquery';
 import {Info} from "./component/Info";
 import {Footer} from "./component/Footer";
+import {Photos} from "./component/Photos";
+import {Provider} from "react-redux";
+import {applyMiddleware, createStore} from "redux";
+import reducers from './Reducer';
+import thunk from 'redux-thunk'
 
 const projects = [    {name:"UBC Tantan", link: "https:\/\/github.com\/ZijiaZhang\/CPSC436_Project", description: "UBC TANTAN is a full-stack social networking web application, which allows new students to UBC to edit their profiles, share posts, add new friends, and chat with them. It also supports group chats, backend monitoring, and friend recommendations.", status: "Academic",image:"images\/UBCTanTan.PNG",category:"Node.js React"},
     {name:"Notification Pusher", link: "https:\/\/github.com\/ZijiaZhang\/NotificationPusher", description: "An app forwards the notification received on Android devices to Apple Watch.", status: "Hackathon",image:"images\/NotificationPusher.PNG",category:"Android, Kotlin, Swift"},
@@ -55,17 +60,22 @@ const experiences = [{color: "green", icon: "fa-search", title:"Intern Student",
         date:"January-May 2021", link:null}
 ] as ExperienceProps[];
 
+const store = createStore(reducers,  applyMiddleware(thunk));
 export class App extends React.Component<{}, {}>{
+
     render() {
         return (
+            <Provider store={store}>
             <div>
                 <NavBar/>
                 <Main/>
                 <Projects projects={projects}/>
                 <Experiences experiences={experiences}/>
+                <Photos/>
                 <Info/>
                 <Footer/>
             </div>
+            </Provider>
         )
     }
 

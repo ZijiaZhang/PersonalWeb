@@ -21,8 +21,11 @@ export class NavBar extends React.Component<{}, {}>{
                 <li className="active">
                     <a href="#experience">Experience</a>
                 </li>
+                <li className="active">
+                    <a href="#photos">Photos</a>
+                </li>
                 <li className="have-child">
-                    <a href="#">Server</a>
+                    <a>Server</a>
                     <ul>
                         <li>
                             <a href="http://files.zijiazhang.me">Files</a>

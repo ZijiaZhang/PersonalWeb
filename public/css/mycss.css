@@ -359,4 +359,14 @@ div.footer>div.links{
   color:white;
 }
 
+.photo{
+  padding: 5px;
+  transition: transform 0.3s ease-in-out;
+}
 
+.photo:hover {
+  transform: scale(1.05);
+}
+.photo:hover:after {
+  opacity: 0;
+}
