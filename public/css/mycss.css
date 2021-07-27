@@ -33,7 +33,7 @@ body{
   float: left;
   background-color: #eeeeee;
   line-height: 30px;
-  border-color: 1px;
+  border: 1px;
 }
 #primary_nav li:hover {
   transition: all 1s;
@@ -241,11 +241,12 @@ div.component-wrapper{
 }
 
 .fullscreen{
-  height:100%;padding: 3em;
+  height:100%;
+  display: flex;
 }
 
 .background{
-  background: url('https://zijiazhang.com/server_files/images/Blured-Background.png') fixed no-repeat;
+  background: url('https://zijiazhang.com/server_files/images/Blured-Background.png') no-repeat;
   background-size: cover;
 }
 
@@ -304,9 +305,10 @@ div.body-text{margin:1.5rem 0}
 .headtitle{
   margin: 0;
     position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    /*top: 50%;*/
+    /*-ms-transform: translateY(-50%);*/
+    /*transform: translateY(-50%);*/
+  color: white;
 }
 
 a:visited{
@@ -353,7 +355,7 @@ div.footer>div.links{
 }
 
 .main-title{
-  width: 100vw;
+
   text-align: center;
   font-size: 7vw;
   color:white;
@@ -479,4 +481,72 @@ div.footer>div.links{
     -o-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+}
+
+.description{
+  position: absolute;
+  left: 40%;
+  display:flex;
+  width: 50%;
+  color:white
+}
+
+.description_text{
+  width: 50%;
+  margin-top: 30px;
+}
+
+.my_photo{
+  border:0;
+  border-radius: 0.5em;
+  width: 40%;
+  object-fit: contain;
+  margin: 20px;
+}
+
+.subtitles h1{
+  font-size: 3vw;
+}
+
+.subtitles h2{
+  font-size: 2vw;
+}
+
+@media only screen and (max-width: 1170px) {
+  .fullscreen{
+  }
+
+  .description{
+    position: absolute;
+    display:flex;
+    left: 10%;
+    width: 80%;
+    color:white
+  }
+  .description_text{
+    width: 70%;
+    margin-top: 30px;
+  }
+  .my_photo{
+    border:0;
+    border-radius: 0.5em;
+    width: 20%;
+    object-fit: contain;
+    margin: 10px;
+  }
+
+  .photo{
+    padding: 2px;
+    transition: transform 0.3s ease-in-out;
+  }
+}
+
+
+@media only screen and (min-width: 1870px) {
+  .description_text h2{
+    font-size: 2em;
+  }
+.description_text p{
+  font-size: 1.5em;
+}
 }

@@ -19,6 +19,7 @@
     "@types/react-router-dom": "^5.1.5",
     "aos": "^2.3.4",
     "express": "^4.17.1",
+    "gsap": "^3.7.1",
     "jquery": "^3.5.1",
     "random-seed": "^0.3.0",
     "react": "^16.13.1",

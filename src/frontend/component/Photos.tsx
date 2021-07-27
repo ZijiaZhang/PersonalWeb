@@ -2,6 +2,8 @@ import React from "react";
 import {connect} from "react-redux";
 import {get_all_photos, update_photos_size} from "../Actions"
 
+
+
 export interface PhotoInfo {
     name: string;
     image: string;

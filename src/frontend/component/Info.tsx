@@ -14,7 +14,7 @@ export class Info extends React.Component<{}, {}>{
                             <div> Bachelor of Science</div>
                             <div> Major in Computer Science</div>
                             <div> Interested in AI, Graphics, Human Computer Interaction</div>
-                            <div> Expect Graduation: 2021</div>
+                            <div> Expect Graduation: 2022</div>
                         </div>
                     </div>
                 </div>
