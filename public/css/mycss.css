@@ -241,7 +241,7 @@ div.component-wrapper{
 }
 
 .fullscreen{
-  height:100%;
+  height:100vh;
   display: flex;
 }
 
