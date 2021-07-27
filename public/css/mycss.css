@@ -483,7 +483,7 @@ div.footer>div.links{
   }
 }
 
-.description{
+.description_section{
   position: absolute;
   left: 40%;
   display:flex;
@@ -516,7 +516,7 @@ div.footer>div.links{
   .fullscreen{
   }
 
-  .description{
+  .description_section{
     position: absolute;
     display:flex;
     left: 10%;

@@ -31,7 +31,7 @@ export class Main extends React.Component<{}, {}>{
                         <h2>University of British Columbia</h2>
                         </div>
                     </div>
-                    <div  ref = {this.description} className={"description"} >
+                    <div  ref = {this.description} className={"description_section"} >
                         <div className={"description_text"}>
                             <br/><br/>
                             <h2>About Zijia Zhang</h2>
