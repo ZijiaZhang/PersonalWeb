@@ -93,10 +93,10 @@ export function format_photos(photos: PhotoInfo[]) {
     return result;
 }
 
-function getMeta(url: string) {
+function getMeta(name: string, url: string) {
     return new Promise((resolve, reject) => {
         let img = new Image();
-        img.onload = () => resolve(img);
+        img.onload = () => resolve({name: name, meta:img});
         img.onerror = () => reject();
         img.src = url;
     });
@@ -108,10 +108,12 @@ export const get_all_photos = () => {
             (data) => {
                 data.json().then(async (value:any)=>{
                     let photos: PhotoInfo[] = [];
-                    let promises = value.map((image: string) => getMeta("photos_tiny/" + image));
+                    let promises = value.map((image: string) =>  getMeta(image, "photos_tiny/" + image));
                     let images: any[] = await Promise.all(promises);
                     for (let img of images){
-                        photos.push({name: img.src, image: img.src, width: img.naturalWidth, height: img.naturalHeight, ratio: img.naturalWidth/img.naturalHeight});
+                        let name = img.name;
+                        let meta = img.meta;
+                        photos.push({name: name, image: name, width: meta.naturalWidth, height: meta.naturalHeight, ratio: meta.naturalWidth/meta.naturalHeight});
                     }
                     photos = format_photos(photos);
 
@@ -133,5 +135,26 @@ export const update_photos_size = () => {
                 message: null
             });
         }
+};
+
+
+export const update_selected_photo = (photo: PhotoInfo) => {
+    return function(dispatch: any) {
+        console.log(photo);
+        dispatch({
+            type: "selected_photo",
+            message: photo
+        });
+    }
+};
+
+export const remove_selected_photo = () => {
+    return function(dispatch: any) {
+        console.log("removed");
+        dispatch({
+            type: "remove_photo",
+            message: null
+        });
+    }
 };
 

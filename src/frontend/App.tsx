@@ -26,7 +26,7 @@ const projects = [    {name:"UBC Tantan", link: "https:\/\/github.com\/ZijiaZhan
     {name:"ScifiRunner",link:"https:\/\/github.com\/ZijiaZhang\/ScifiRunner",description:"An endless runner game that is currently under development using Unreal Engine 4. Targeting mobile and desktop Platforms.",status:"Personal",image:"images\/No_image_3x4.svg",category:"Unreal C++ Android iOS"},
     {name:"3D Tetris",link:"files\/public\/3DTetris\/",description:"A 3D Teris Game Available on Android and iOS in which user can customize the size of the board. ",status:"Personal",image:"images\/Tetris.png",category:"Unreal C++ Mobile"},
  //   {name:"Simple Neural Net",link:".\/SimpleNN\/index.html",description:"A Simple Neural Network",status:"Finished",image:"images\/No_image_3x4.svg",category:"Personal"}
-    {name:"3D Snake Game",link:"VideoPlayer.php?link=videos\/SnakeGameIntro.mov",description:"In this 3D Sanake Game, user need to control a snake to move on a surface of a rotating cube and collect \"food\" for points. The more food snake consumes, the longer it will be.",status:"Academic",image:"images\/Snake.png",category:"Java"},
+//    {name:"3D Snake Game",link:"VideoPlayer.php?link=videos\/SnakeGameIntro.mov",description:"In this 3D Sanake Game, user need to control a snake to move on a surface of a rotating cube and collect \"food\" for points. The more food snake consumes, the longer it will be.",status:"Academic",image:"images\/Snake.png",category:"Java"},
 
 ];
 
