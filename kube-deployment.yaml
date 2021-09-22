@@ -1,0 +1,74 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: personal-web-depl
+  labels:
+    app: personal-web
+spec:
+  selector:
+    matchLabels:
+      app: personal-web
+      tier: web
+  template:
+    metadata:
+      labels:
+        app: personal-web
+        tier: web
+    spec:
+      containers:
+      - name: personal-web
+        image: us-west1-docker.pkg.dev/master-shore-288305/personal-web-repo/personal-web:v1
+        ports:
+        - containerPort: 9001
+        resources:
+          requests:
+            cpu: 100m
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: personal-web-service
+  labels:
+    app: personal-web
+spec:
+  selector:
+    app: personal-web
+    tier: web
+  ports:
+  - port: 80
+    targetPort: 9001
+  # type: LoadBalancer
+  # loadBalancerIP: 34.127.88.35
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: personal-web-ingress
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: personal-web-ingress-ip
+  labels:
+    app: personal-web
+spec:
+  defaultBackend:
+    service:
+      name: personal-web-service
+      port:
+        number: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: personal-web-service-external
+  labels:
+    app: personal-web
+spec:
+  selector:
+    app: personal-web
+    tier: web
+  ports:
+  - port: 80
+    targetPort: 9001
+  type: LoadBalancer
+  loadBalancerIP: 34.127.88.35

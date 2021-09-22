@@ -104,27 +104,53 @@ function getMeta(name: string, url: string) {
 
 export const get_all_photos = () => {
     return function(dispatch: any) {
-        fetch('/api/images').then(
-            (data) => {
-                data.json().then(async (value:any)=>{
-                    let photos: PhotoInfo[] = [];
-                    let promises = value.map((image: string) =>  getMeta(image, "photos_tiny/" + image));
-                    let images: any[] = await Promise.all(promises);
-                    for (let img of images){
-                        let name = img.name;
-                        let meta = img.meta;
-                        photos.push({name: name, image: name, width: meta.naturalWidth, height: meta.naturalHeight, ratio: meta.naturalWidth/meta.naturalHeight});
-                    }
-                    photos = format_photos(photos);
-
-
-                    dispatch({type: "receive_images",
-                        message:
-                        photos})
-                }).catch(() => {});
-
+        let value = [
+            "photo-01.jpg",
+            "photo-02.jpg",
+            "photo-03.jpg",
+            "photo-04.jpg",
+            "photo-05.jpg",
+            "photo-06.jpg",
+            "photo-07.jpg",
+            "photo-08.jpg",
+            "photo-09.jpg",
+            "photo-10.jpg",
+            "photo-11.jpg",
+            "photo-12.jpg",
+            "photo-13.jpg",
+            "photo-14.jpg",
+            "photo-15.jpg",
+            "photo-16.jpg",
+            "photo-17.jpg",
+            "photo-18.jpg",
+            "photo-19.jpg",
+            "photo-20.jpg",
+            "photo-21.jpg",
+            "photo-22.jpg",
+            "photo-23.jpg",
+            "photo-24.jpg",
+            "photo-25.jpg",
+            "photo-26.jpg",
+            "photo-27.jpg",
+            "photo-28.jpg",
+            "photo-29.jpg"
+        ]
+        let photos: PhotoInfo[] = [];
+        let promises = value.map((image: string) =>  getMeta(image, "photos_tiny/" + image));
+        Promise.all(promises).then((images: any[]) => {
+            for (let img of images){
+                let name = img.name;
+                let meta = img.meta;
+                photos.push({name: name, image: name, width: meta.naturalWidth, height: meta.naturalHeight, ratio: meta.naturalWidth/meta.naturalHeight});
             }
-        ).catch(() => {});
+            photos = format_photos(photos);
+
+
+            dispatch({type: "receive_images",
+                message:
+                photos})
+        });
+
     }
 };
 
